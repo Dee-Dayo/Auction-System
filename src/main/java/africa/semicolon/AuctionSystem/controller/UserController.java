@@ -38,7 +38,7 @@ public class UserController {
         }
     }
 
-    @PostMapping("/sign_in")
+    @PatchMapping("/sign_in")
     public ResponseEntity<?> login(@RequestBody UserLoginRequest userLoginRequest){
         try {
             UserLoginResponse response = userServices.login(userLoginRequest);
